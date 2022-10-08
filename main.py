@@ -25,11 +25,11 @@ while race_on:
 	for turtle in all_turtles:
 		if turtle.xcor() > 330:
 			race_on = False
-			print(f"The {turtle.fillcolor()} turtle is the winner!")
+			print(f"The \33[1m{turtle.fillcolor()}\33[0m turtle is the winner!\n")
 			if user_bet == turtle.fillcolor():
-				print("You won the bet!")
+				print("\33[32mYou won the bet!\33[0m")
 			else:
-				print("You lost the bet!")
+				print("\33[31mYou lost the bet!\33[0m")
 		
 		random_distance = random.randint(0, 10)
 		turtle.fd(random_distance)
